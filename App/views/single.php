@@ -1,10 +1,3 @@
-<?php
-require '../vendor/autoload.php';
-
-use App\src\Manager\ArticleManager;
-use App\src\Manager\CommentManager;
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,8 +10,6 @@ use App\src\Manager\CommentManager;
     <h1>Mon blog</h1>
     <p>En construction</p>
     <?php
-    $article = new ArticleManager();
-    $articles = $article->getArticle($_GET['articleId']);
     $article = $articles->fetch()
     ?>
     <div>
@@ -35,8 +26,6 @@ use App\src\Manager\CommentManager;
     <div id="comments" class="text-left" style="margin-left: 50px">
         <h3>Commentaires</h3>
         <?php
-        $comment = new CommentManager();
-        $comments = $comment->getCommentsFromArticle($_GET['articleId']);
         while($comment = $comments->fetch())
         {
             ?>
