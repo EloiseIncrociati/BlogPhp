@@ -1,16 +1,16 @@
 <?php
 
-namespace App\src\controller;
+namespace App\src\Controller;
 
-class ErrorController
+class ErrorController extends Controller
 {
     public function errorNotFound()
     {
-        require '../views/error_404.php';
+        return $this->view->render('error_404');
     }
 
     public function errorServer()
     {
-        require '../views/error_500.php';
+        return $this->view->render('error_500');
     }
 }
