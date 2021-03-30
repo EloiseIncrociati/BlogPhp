@@ -2,13 +2,16 @@
 
 namespace App\src\Controller;
 
+use App\config\Parameter;
+
 class BackController extends Controller
 {
-    public function addArticle($post)
+    public function addArticle(Parameter $post)
     {
-        if(isset($post['submit'])) {
-            $this->articleManager->addArticle($post);
-            header('Location: ../../index.php');
+        if($post->get('submit')) {
+            $this->articleDAO->addArticle($post);
+            $this->session->set('add_article', 'Le nouvel article a bien été ajouté');
+            header('Location: ../public/index.php');
         }
         return $this->view->render('add_article', [
             'post' => $post

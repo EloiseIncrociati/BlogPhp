@@ -2,7 +2,8 @@
 
 namespace App\src\Manager;
 
-use App\src\Model\Article;
+use App\config\Parameter;
+use App\src\model\Article;
 
 class ArticleManager extends DatabaseManager
 {
@@ -39,11 +40,9 @@ class ArticleManager extends DatabaseManager
         return $this->buildObject($article);
     }
 
-    public function addArticle($article)
+    public function addArticle(Parameter $post)
     {
-        //Permet de récupérer les variables $title, $content et $author
-        extract($article);
         $sql = 'INSERT INTO article (title, content, author, createdAt) VALUES (?, ?, ?, NOW())';
-        $this->createQuery($sql, [$title, $content, $author]);
+        $this->createQuery($sql, [$post->get('title'), $post->get('content'), $post->get('author')]);
     }
 }
