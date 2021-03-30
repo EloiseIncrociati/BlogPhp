@@ -2,6 +2,8 @@
 
 namespace App\config;
 
+use App\config\Session;
+
 class Request
 {
     private $get;
