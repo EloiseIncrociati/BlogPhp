@@ -1,5 +1,5 @@
 <?php
-$route = isset($article) && $article->getId() ? 'editArticle&articleId='.$article->getId() : 'addArticle';
+$route = isset($post) && $post->get('id') ? 'editArticle&articleId='.$post->get('id') : 'addArticle';
 $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
 $title = isset($article) && $article->getTitle() ? htmlspecialchars($article->getTitle()) : '';
 $content = isset($article) && $article->getContent() ? htmlspecialchars($article->getContent()) : '';

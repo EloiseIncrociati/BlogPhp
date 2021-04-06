@@ -37,7 +37,6 @@ class BackController extends Controller
                 'post' => $post,
                 'errors' => $errors
             ]);
-
         }
         $post->set('id', $article->getId());
         $post->set('title', $article->getTitle());
