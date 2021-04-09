@@ -2,6 +2,7 @@
 
 namespace App\src\Manager;
 
+use App\config\Parameter;
 use App\src\Model\Comment;
 
 class CommentManager extends DatabaseManager
@@ -27,5 +28,11 @@ class CommentManager extends DatabaseManager
         }
         $result->closeCursor();
         return $comments;
+    }
+
+    public function addComment(Parameter $post, $articleId)
+    {
+        $sql = 'INSERT INTO comment (pseudo, content, createdAt, article_id) VALUES (?, ?, NOW(), ?)';
+        $this->createQuery($sql, [$post->get('pseudo'), $post->get('content'), $articleId]);
     }
 }
