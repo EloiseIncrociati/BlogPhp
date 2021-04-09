@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<?php $this->title = "Nouvel article"; ?>
-<h1>Mon blog</h1>
-<p>En construction</p>
-<div>
-    <?php include('form_article.php');?>
-    <a href="../public/index.php">Retour à l'accueil</a>
-</div>
-=======
 <?php
 $route = isset($post) && $post->get('id') ? 'editArticle&articleId='.$post->get('id') : 'addArticle';
 $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
@@ -23,4 +14,5 @@ $submit = $route === 'addArticle' ? 'Envoyer' : 'Mettre à jour';
     <?= isset($errors['author']) ? $errors['author'] : ''; ?>
     <input type="submit" value="<?= $submit; ?>" id="submit" name="submit">
 </form>
->>>>>>> 83b986aa24f04fd42bbcef245d704a2f449ed8a3
+
+<a href="../public/index.php">Retour à l'accueil</a>

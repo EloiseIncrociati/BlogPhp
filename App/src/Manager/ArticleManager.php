@@ -56,4 +56,10 @@ class ArticleManager extends DatabaseManager
             'articleId' => $articleId
         ]);
     }
+
+    public function deleteArticle($articleId)
+    {
+        $sql = 'DELETE FROM article WHERE id = ?';
+        $this->createQuery($sql, [$articleId]);
+    }
 }
