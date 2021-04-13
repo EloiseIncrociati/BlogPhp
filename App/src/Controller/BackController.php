@@ -47,4 +47,18 @@ class BackController extends Controller
             'post' => $post
         ]);
     }
+
+    public function deleteArticle($articleId)
+    {
+        $this->articleManager->deleteArticle($articleId);
+        $this->session->set('delete_article', 'L\' article a bien été supprimé');
+        header('Location: ../public/index.php');
+    }
+
+    public function deleteComment($commentId)
+    {
+        $this->commentManager->deleteComment($commentId);
+        $this->session->set('delete_comment', 'Le commentaire a bien été supprimé');
+        header('Location: ../public/index.php');
+    }
 }
