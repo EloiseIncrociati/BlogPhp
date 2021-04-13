@@ -26,7 +26,7 @@
         <p><?= htmlspecialchars($comment->getContent());?></p>
         <p>Posté le <?= htmlspecialchars($comment->getCreatedAt());?></p>
         <?php
-        var_dump($comment);
+
         if($comment->isFlag()) {
             ?>
             <p>Ce commentaire a déjà été signalé</p>

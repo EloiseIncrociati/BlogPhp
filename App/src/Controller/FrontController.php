@@ -50,4 +50,9 @@ class FrontController extends Controller
         $this->session->set('flag_comment', 'Le commentaire a bien été signalé');
         header('Location: ../public/index.php');
     }
+
+    public function register(Parameter $post)
+    {
+        return $this->view->render('register');
+    }
 }
