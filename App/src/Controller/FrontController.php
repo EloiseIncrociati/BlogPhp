@@ -54,9 +54,19 @@ class FrontController extends Controller
     public function register(Parameter $post)
     {
         if($post->get('submit')) {
-            $this->userManager->register($post);
-            $this->session->set('register', 'Votre inscription a bien été effectuée');
-            header('Location: ../public/index.php');    
+            $errors = $this->validation->validate($post, 'User');
+            if($this->userManager->checkUser($post)) {
+                $errors['pseudo'] = $this->userManager->checkUser($post);
+            }
+            if(!$errors) {
+                $this->userManager->register($post);
+                $this->session->set('register', 'Votre inscription a bien été effectuée');
+                header('Location: ../public/index.php');
+            }
+            return $this->view->render('register', [
+                'post' => $post,
+                'errors' => $errors
+            ]);
         }
         return $this->view->render('register');
     }
