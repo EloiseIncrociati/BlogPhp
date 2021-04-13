@@ -50,6 +50,7 @@ class Router
                 elseif($route === 'deleteComment'){
                     $this->backController->deleteComment($this->request->getGet()->get('commentId'));
                 }
+                
             }
             else{
                 $this->frontController->home();

@@ -1,4 +1,4 @@
-<?php $this->title = "Article"; ?>
+<?php $this->title = 'Article'; ?>
 <h1>Mon blog</h1>
 <p>En construction</p>
 <div>
@@ -36,6 +36,7 @@
             <?php
         }
         ?>
+        <p><a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a></p>
         <br>
         <?php
     }
