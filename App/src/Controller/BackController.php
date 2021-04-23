@@ -10,11 +10,15 @@ class BackController extends Controller
     {
         $articles = $this->articleManager->getArticles();
         $comments = $this->commentManager->getFlagComments();
+        $users = $this->userManager->getUsers();
+
         return $this->view->render('administration', [
             'articles' => $articles,
-            'comments' => $comments
+            'comments' => $comments,
+            'users' => $users
         ]);
     }
+
 
     public function addArticle(Parameter $post)
     {
@@ -104,6 +108,13 @@ class BackController extends Controller
     {
         $this->userManager->deleteAccount($this->session->get('pseudo'));
         $this->logoutOrDelete('delete_account');
+    }
+
+    public function deleteUser($userId)
+    {
+        $this->userManager->deleteUser($userId);
+        $this->session->set('delete_user', 'L\'utilisateur a bien été supprimé');
+        header('Location: ../public/index.php?route=administration');
     }
 
     private function logoutOrDelete($param)
