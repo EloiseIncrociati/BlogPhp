@@ -6,6 +6,27 @@ use App\config\Parameter;
 
 class BackController extends Controller
 {
+    private function checkLoggedIn()
+    {
+        if(!$this->session->get('pseudo')) {
+            $this->session->set('need_login', 'Vous devez vous connecter pour accéder à cette page');
+            header('Location: ../public/index.php?route=login');
+        } else {
+            return true;
+        }
+    }
+
+    private function checkAdmin()
+    {
+        $this->checkLoggedIn();
+        if(!($this->session->get('role') === 'admin')) {
+            $this->session->set('not_admin', 'Vous n\'avez pas le droit d\'accéder à cette page');
+            header('Location: ../public/index.php?route=profile');
+        } else {
+            return true;
+        }
+    }
+
     public function administration()
     {
         $articles = $this->articleManager->getArticles();
@@ -18,7 +39,6 @@ class BackController extends Controller
             'users' => $users
         ]);
     }
-
 
     public function addArticle(Parameter $post)
     {
