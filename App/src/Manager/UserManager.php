@@ -3,6 +3,7 @@
 namespace App\src\Manager;
 
 use App\config\Parameter;
+use App\src\Model\User;
 
 class UserManager extends DatabaseManager
 {
