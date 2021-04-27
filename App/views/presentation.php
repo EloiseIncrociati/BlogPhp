@@ -1,1 +1,1 @@
-<?php $this->title = 'Bienvenue'; ?>
+<?php $this->title = 'Bienvenue'; ?> a
