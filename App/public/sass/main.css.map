@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "abstract/_variables.scss",
+        "layout/_navigation.scss",
+        "layout/_header.scss",
+        "layout/_footer.scss",
+        "layout/_forms.scss",
+        "components/_buttons.scss",
+        "pages/_home.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
