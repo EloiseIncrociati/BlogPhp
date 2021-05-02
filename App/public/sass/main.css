@@ -1,0 +1,52 @@
+.cardaccueil {
+  padding: 5px;
+  margin: 15px;
+  color: #ffffff;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+body {
+  background-color: peachpuff;
+}
+
+.container {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #015252), color-stop(12%, #ffffff));
+  background-image: linear-gradient(to bottom, #015252 50%, #ffffff 12%);
+  border-radius: 15px;
+}
+
+.topspace {
+  margin-top: 2%;
+}
+
+@media (min-width: 20em) {
+  .identity {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 40em) {
+  .identity {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.push {
+  margin-left: auto;
+}
+
+section {
+  width: 65%;
+}
+/*# sourceMappingURL=main.css.map */

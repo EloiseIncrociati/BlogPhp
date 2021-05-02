@@ -27,6 +27,15 @@ class BackController extends Controller
         }
     }
 
+    public function presentation()
+    {
+        $users = $this->userManager->getUsers();
+
+        return $this->view->render('presentation', [
+            'users' => $users
+        ]);
+    }
+
     public function administration()
     {
         $articles = $this->articleManager->getArticles();
