@@ -1,7 +1,11 @@
 //VARIABLES SASS ::after
-$textmain : #ffffff;
 $greenmain : #015252;
+$body-color: #1F7A8C;
+$textmain : #ffffff;
+$text-title : #02C9C9;
+$text-color : #BFDBF7;
 $mainbackground : linear-gradient(to bottom, $greenmain 50%, #ffffff 12%);
+$btn-color : #02C9C9;
 
 //Responsive Design : 
 $xl: 87.5em; // 4k and hi-res desktop
@@ -9,3 +13,14 @@ $lg: 60em; // 1080 and hi-res laptops
 $med: 40em; // hi-res tablets and low-res laptops
 $sm: 28em; // mobile and low-res tablets
 $xs: 20em; // mobile only
+
+//Police d'écriture
+@font-face {
+    font-family: "Itim";
+    src: url("../../fonts/Itim-Regular.ttf") format("ttf"),
+}
+
+@font-face {
+    font-family: "Lobster";
+    src: url("../../fonts/Lobster-Regular.ttf") format("ttf"),
+}

@@ -1,15 +1,109 @@
-.cardaccueil {
-  padding: 5px;
-  margin: 15px;
-  color: #ffffff;
+@font-face {
+  font-family: "Itim";
+  src: url("../../fonts/Itim-Regular.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("../../fonts/Lobster-Regular.ttf") format("ttf");
+}
+
+nav {
+  vertical-align: top;
 }
 
 nav li {
   list-style-type: none;
 }
 
+h1, h2, h3, h4 {
+  font-family: 'Itim', sans-serif;
+  font-weight: 300;
+  color: #02C9C9;
+}
+
+* {
+  font-family: 'Lobster', sans-serif;
+  font-weight: 300;
+}
+
 body {
-  background-color: peachpuff;
+  background-color: #1F7A8C;
+}
+
+.identity {
+  max-height: 85px;
+}
+
+.container {
+  padding-bottom: 25px;
+  min-height: 90vh;
+}
+
+.cardaccueil {
+  padding: 5px;
+  margin: 15px;
+  color: #BFDBF7;
+}
+
+#descriptif {
+  color: #BFDBF7;
+}
+
+.name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.name img {
+  max-height: 50px;
+  max-width: 100px;
+  width: auto;
+  margin-right: 25px;
+}
+
+.btn-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  outline: 0;
+  background-color: #02C9C9;
+  height: 45px;
+  line-height: 42px;
+  padding: 0 30px;
+  font-size: 20px;
+  border-radius: 30px;
+  color: #283132;
+  cursor: pointer;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
+          transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.btn:active {
+  -webkit-transform: scale(1.05, 1.05);
+          transform: scale(1.05, 1.05);
 }
 
 .container {
@@ -46,7 +140,31 @@ body {
   margin-left: auto;
 }
 
-section {
+.blog-section, .contact-section {
   width: 65%;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+  padding: 10px 50px 10px;
+}
+
+.blog-list {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+  padding: 20px 50px 20px;
+}
+
+#bloglist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.title-page {
+  margin-bottom: 25px;
 }
 /*# sourceMappingURL=main.css.map */

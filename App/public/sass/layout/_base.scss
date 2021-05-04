@@ -1,9 +1,44 @@
+h1, h2, h3, h4{
+    font-family: 'Itim', sans-serif;
+    font-weight: 300;
+    color: $text-title;
+}
+
+*{
+  font-family: 'Lobster', sans-serif;
+  font-weight: 300;
+}
+
+body{
+    background-color: $body-color;
+}
+
+.identity{
+    max-height: 85px;
+}
+
+.container{
+    padding-bottom: 25px;
+    min-height: 90vh;
+}
+
 .cardaccueil{
     padding: 5px;
     margin: 15px;
-    color: $textmain; 
+    color: $text-color; 
 }
 
-nav li{
-    list-style-type: none;
+#descriptif{
+    color: $text-color; 
+}
+
+.name{
+    display: flex;
+}
+
+.name img{
+    max-height: 50px;
+    max-width: 100px;
+    width: auto;
+    margin-right: 25px;
 }

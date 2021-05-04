@@ -1,43 +1,53 @@
 <?php $this->title = 'Accueil'; ?>
-
 <h2>Bienvenue sur mon blog</h2>
-
+<?= $this->session->show('add_article'); ?>
+<?= $this->session->show('edit_article'); ?>
+<?= $this->session->show('delete_article'); ?>
+<?= $this->session->show('add_comment'); ?>
+<?= $this->session->show('flag_comment'); ?>
+<?= $this->session->show('delete_comment'); ?>
 <?= $this->session->show('register'); ?>
 <?= $this->session->show('login'); ?>
 <?= $this->session->show('logout'); ?>
 <?= $this->session->show('delete_account'); ?>
 
-<section class="contact-section my-5">
+<section class="blog-section my-5 shadow mb-5 bg-white rounded">
+    <i class="fas fa-eye"></i><h3>Qui suis-je ?</h3>
+    <p>
+        Je m'appelle Eloïse Incrociati, j'ai 30 ans et je suis actuellement en formation en alternance pour devenir développeuse web. </br>
+        Ce blog est un de mes projets pour valider ma formation et je suis heureuse de vous accueillir ici ! </br>
+    </p>
+    </br>
+    <div class="btn-wrapper">
+      <button type="button" class="btn" onclick="window.location.href='index.php';">Visiter le Blog</button>
+    </div>
+</section>
+
+<section class="contact-section my-5 shadow p-3 mb-5 bg-white rounded">
   <div class="card">
     <div class="row">
       <div class="col-lg-8">
         <div class="card-body form">
-          <h3 class="mt-4"><i class="fas fa-paper-plane"></i> Write to us:</h3>
+          <h3 class="mt-4"><i class="fas fa-paper-plane"></i> Contact:</h3>
           <div class="row">
             <div class="col-md-6">
               <div class="md-form mb-0">
                 <input type="text" id="form-contact-name" class="form-control">
-                <label for="form-contact-name" class="">Your name</label>
+                <label for="form-contact-name" class="">Nom</label>
               </div>
             </div>
             <div class="col-md-6">
               <div class="md-form mb-0">
-                <input type="text" id="form-contact-email" class="form-control">
-                <label for="form-contact-email" class="">Your email</label>
+                <input type="text" id="form-contact-prenom" class="form-control">
+                <label for="form-contact-prenom" class="">Prénom</label>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
+          <div class="col-md-12">
               <div class="md-form mb-0">
-                <input type="text" id="form-contact-phone" class="form-control">
-                <label for="form-contact-phone" class="">Your phone</label>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-company" class="form-control">
-                <label for="form-contact-company" class="">Your company</label>
+                <input type="text" id="form-contact-email" class="form-control">
+                <label for="form-contact-email" class="">Email</label>
               </div>
             </div>
           </div>
@@ -46,7 +56,7 @@
               <div class="md-form mb-0">
                 <textarea id="form-contact-message" class="form-control md-textarea" rows="3"></textarea>
                 <label for="form-contact-message">Your message</label>
-                <a class="btn-floating btn-lg blue">
+                <a class="btn-floating btn-lg">
                   <i class="far fa-paper-plane"></i>
                 </a>
               </div>
@@ -71,17 +81,17 @@
           <hr class="hr-light my-4">
           <ul class="list-inline text-center list-unstyled">
             <li class="list-inline-item">
-              <a class="p-2 fa-lg tw-ic">
-                <i class="fab fa-twitter"></i>
+              <a href="https://github.com/EloiseIncrociati" class="p-2 fa-lg tw-ic">
+                <i class="fab fa-github-alt"></i>              
               </a>
             </li>
             <li class="list-inline-item">
-              <a class="p-2 fa-lg li-ic">
+              <a href="https://www.linkedin.com/in/%C3%A9lo%C3%AFse-incrociati-13b083152/?originalSubdomain=fr" class="p-2 fa-lg li-ic">
                 <i class="fab fa-linkedin-in"> </i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a class="p-2 fa-lg ins-ic">
+              <a href="https://www.instagram.com/stigdraws/" class="p-2 fa-lg ins-ic">
                 <i class="fab fa-instagram"> </i>
               </a>
             </li>

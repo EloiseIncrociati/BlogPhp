@@ -14,9 +14,10 @@
     <div class="container topspace">
         <div class="identity col-md-12 col-sd-12 box">
             <div class="cardaccueil col-md-6">
-                <img src="../public/img/deposite.jpg" alt="Profile picture" />
-                <h1>Eloïse Incrociati</h1>
-                <p>Développeuse d'Application Php, quand travailler devient un plaisir.</p>
+                <div class="name">
+                    <img src="../public/img/depositphotos_prulpe.jpg" alt="Profile picture" />
+                    <h1>Eloïse Incrociati</h1>
+                </div></br>
             </div>
             <nav class="navbar navbar-expand-lg push">
                 <a class="navbar-brand" href="../public/index.php?route=presentation">Accueil</a>
@@ -56,6 +57,8 @@
                 </div>
             </nav>
         </div>
+        <p id="descriptif">Développeuse d'Application Php, quand travailler devient un plaisir.</p>
+
         <div id="content">
 
             <?= $content ?>
