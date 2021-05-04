@@ -1,6 +1,6 @@
 //Responsive design : 
 @mixin responsive($query) {
-    @media ( min-width: + $query ) {
+    @media (min-width: + $query) {
         @content;
     }
 }

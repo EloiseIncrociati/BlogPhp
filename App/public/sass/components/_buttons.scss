@@ -1,38 +1,38 @@
 //Liens : 
-.far{
-    $text-title : #02C9C9;
+.far {
+  $text-title: #02C9C9;
 }
 
 //Boutons :
-.btn-wrapper{
-    width: 100%;
-    text-align: center;
-    margin-bottom: 25px;
+.btn-wrapper {
+  width        : 100%;
+  text-align   : center;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display                   : inline-block;
+  box-shadow                : none;
+  appearance                : none;
+  border                    : 0;
+  outline                   : 0;
+  background-color          : $btn-color;
+  height                    : 45px;
+  line-height               : 42px;
+  padding                   : 0 30px;
+  font-size                 : 20px;
+  border-radius             : 30px;
+  color                     : rgb(40, 49, 50);
+  cursor                    : pointer;
+  transition                : all .5s;
+  transition-timing-function: cubic-bezier(.2, 3, .4, 1);
+  user-select               : none;
+
+  &:hover {
+    transform: scale(1.1, 1.1);
   }
-  
-  .btn{
-    display: inline-block;
-    box-shadow: none;
-    appearance: none;
-    border: 0;
-    outline: 0;
-    background-color: $btn-color;
-    height: 45px;
-    line-height: 42px;
-    padding: 0 30px;
-    font-size: 20px;
-    border-radius: 30px;
-    color: rgb(40, 49, 50);
-    cursor: pointer;
-    transition: all .5s;
-    transition-timing-function: cubic-bezier(.2, 3, .4, 1);
-    user-select: none;
-    
-    &:hover{
-      transform: scale(1.1, 1.1);
-    }
-    
-    &:active{
-      transform: scale(1.05, 1.05);
-    }
+
+  &:active {
+    transform: scale(1.05, 1.05);
   }
+}

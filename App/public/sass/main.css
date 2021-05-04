@@ -1,13 +1,4 @@
-@font-face {
-  font-family: "Itim";
-  src: url("../../fonts/Itim-Regular.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "Lobster";
-  src: url("../../fonts/Lobster-Regular.ttf") format("ttf");
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Lobster&display=swap");
 nav {
   vertical-align: top;
 }
@@ -16,14 +7,17 @@ nav li {
   list-style-type: none;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Itim', sans-serif;
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Lobster', cursive;
   font-weight: 300;
   color: #02C9C9;
 }
 
 * {
-  font-family: 'Lobster', sans-serif;
+  font-family: 'Itim', cursive;
   font-weight: 300;
 }
 
@@ -38,15 +32,12 @@ body {
 .container {
   padding-bottom: 25px;
   min-height: 90vh;
+  margin-bottom: 2%;
 }
 
 .cardaccueil {
   padding: 5px;
   margin: 15px;
-  color: #BFDBF7;
-}
-
-#descriptif {
   color: #BFDBF7;
 }
 
@@ -61,6 +52,14 @@ body {
   max-width: 100px;
   width: auto;
   margin-right: 25px;
+}
+
+.center {
+  text-align: center;
+}
+
+.paragraphes {
+  color: #BFDBF7;
 }
 
 .btn-wrapper {
@@ -140,7 +139,8 @@ body {
   margin-left: auto;
 }
 
-.blog-section, .contact-section {
+.blog-section,
+.contact-section {
   width: 65%;
   text-align: center;
   margin-right: auto;
@@ -161,10 +161,49 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
 }
 
 .title-page {
   margin-bottom: 25px;
+}
+
+.tableaux {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+}
+
+.tableaux td,
+.tableaux th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tableaux tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.tableaux tr:hover {
+  background-color: #ddd;
+}
+
+.tableaux th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #ddd;
+  color: white;
+}
+
+.tableaux-title {
+  background-color: #1F7A8C;
 }
 /*# sourceMappingURL=main.css.map */

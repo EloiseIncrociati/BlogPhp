@@ -1,16 +1,18 @@
-.blog-list{
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
+.blog-list {
+    text-align   : center;
+    margin-right : auto;
+    margin-left  : auto;
     margin-bottom: 15px;
-    padding: 20px 50px 20px;
+    padding      : 20px 50px 20px;
 }
 
-#bloglist{
-    display: flex;
-    width: 100%;
+#bloglist {
+    display        : flex;
+    justify-content: space-between;
+    flex-wrap      : wrap;
+    width          : 100%;
 }
 
-.title-page{
+.title-page {
     margin-bottom: 25px;
 }

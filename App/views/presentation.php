@@ -12,15 +12,16 @@
 <?= $this->session->show('delete_account'); ?>
 
 <section class="blog-section my-5 shadow mb-5 bg-white rounded">
-    <i class="fas fa-eye"></i><h3>Qui suis-je ?</h3>
-    <p>
-        Je m'appelle Eloïse Incrociati, j'ai 30 ans et je suis actuellement en formation en alternance pour devenir développeuse web. </br>
-        Ce blog est un de mes projets pour valider ma formation et je suis heureuse de vous accueillir ici ! </br>
-    </p>
-    </br>
-    <div class="btn-wrapper">
-      <button type="button" class="btn" onclick="window.location.href='index.php';">Visiter le Blog</button>
-    </div>
+  <i class="fas fa-eye"></i>
+  <h3>Qui suis-je ?</h3>
+  <p>
+    Je m'appelle Eloïse Incrociati, j'ai 30 ans et je suis actuellement en formation en alternance pour devenir développeuse web. </br>
+    Ce blog est un de mes projets pour valider ma formation et je suis heureuse de vous accueillir ici ! </br>
+  </p>
+  </br>
+  <div class="btn-wrapper">
+    <button type="button" class="btn" onclick="window.location.href='index.php';">Visiter le Blog</button>
+  </div>
 </section>
 
 <section class="contact-section my-5 shadow p-3 mb-5 bg-white rounded">
@@ -44,7 +45,7 @@
             </div>
           </div>
           <div class="row">
-          <div class="col-md-12">
+            <div class="col-md-12">
               <div class="md-form mb-0">
                 <input type="text" id="form-contact-email" class="form-control">
                 <label for="form-contact-email" class="">Email</label>
@@ -82,7 +83,7 @@
           <ul class="list-inline text-center list-unstyled">
             <li class="list-inline-item">
               <a href="https://github.com/EloiseIncrociati" class="p-2 fa-lg tw-ic">
-                <i class="fab fa-github-alt"></i>              
+                <i class="fab fa-github-alt"></i>
               </a>
             </li>
             <li class="list-inline-item">

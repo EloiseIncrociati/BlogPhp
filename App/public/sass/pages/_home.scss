@@ -1,17 +1,18 @@
-.container{
+.container {
     background-image: $mainbackground;
-    border-radius: 15px;
+    border-radius   : 15px;
 }
 
-.topspace{
+.topspace {
     margin-top: 2%;
 }
 
-.identity{
-    @include responsive($xs){
+.identity {
+    @include responsive($xs) {
         display: inline-block;
     }
-    @include responsive($med){
+
+    @include responsive($med) {
         display: flex;
     }
 }

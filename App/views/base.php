@@ -39,8 +39,7 @@
                             <li>
                                 <a class="nav-link" href="../public/index.php?route=profile">Profil</a>
                             </li>
-                        <?php }
-                        else{ ?>
+                        <?php } else { ?>
                             <li class="nav-item">
                                 <a class="nav-link" href="../public/index.php?route=register">Inscription</a>
                             </li>
@@ -57,7 +56,7 @@
                 </div>
             </nav>
         </div>
-        <p id="descriptif">Développeuse d'Application Php, quand travailler devient un plaisir.</p>
+        <p class="paragraphes">Développeuse d'Application Php, quand travailler devient un plaisir.</p>
 
         <div id="content">
 
