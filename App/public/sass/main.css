@@ -62,6 +62,14 @@ body {
   color: #BFDBF7;
 }
 
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .btn-wrapper {
   width: 100%;
   text-align: center;

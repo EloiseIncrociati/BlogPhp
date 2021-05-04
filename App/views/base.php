@@ -57,9 +57,7 @@
             </nav>
         </div>
         <p class="paragraphes">Développeuse d'Application Php, quand travailler devient un plaisir.</p>
-
         <div id="content">
-
             <?= $content ?>
         </div>
     </div>
