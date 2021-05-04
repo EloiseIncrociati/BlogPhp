@@ -1,0 +1,26 @@
+.container {
+    background-image: $mainbackground;
+    border-radius   : 15px;
+}
+
+.topspace {
+    margin-top: 2%;
+}
+
+.identity {
+    @include responsive($xs) {
+        display: inline-block;
+    }
+
+    @include responsive($med) {
+        display: flex;
+    }
+}
+
+.box {
+    display: flex;
+}
+
+.push {
+    margin-left: auto;
+}

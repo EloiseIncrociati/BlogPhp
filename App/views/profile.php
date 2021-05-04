@@ -1,12 +1,18 @@
 <?php $this->title = 'Mon profil'; ?>
-<h1>Mon blog</h1>
-<p>En construction</p>
+<h1>Mon Compte</h1>
+<p>Bienvenue dans votre espace personnel.</p>
 <?= $this->session->show('update_password'); ?>
-<div>
-    <h2><?= $this->session->get('pseudo'); ?></h2>
-    <p><?= $this->session->get('id'); ?></p>
-    <a href="../public/index.php?route=updatePassword">Modifier son mot de passe</a>
-    <a href="../public/index.php?route=deleteAccount">Supprimer mon compte</a>
-</div>
+<section class="blog-section my-5 shadow mb-5 bg-white rounded">
+  <h2>Bienvenue, <?= $this->session->get('pseudo'); ?></h2>
+  <p>Votre identifiant est le : <?= $this->session->get('id'); ?></p>
+  <div class="btn-wrapper">
+    <button type="button" class="btn" onclick="window.location.href='index.php.php?route=updatePassword';">Modifier son mot de passe</button>
+  </div>
+  <div class="btn-wrapper">
+    <button type="button" class="btn" onclick="window.location.href='index.php.php?route=deleteAccount';">Supprimer mon compte</button>
+  </div>
+</section>
 <br>
-<a href="../public/index.php">Retour à l'accueil</a>
+<div class="center">
+  <a href="../public/index.php">Retour à l'accueil</a>
+</div>

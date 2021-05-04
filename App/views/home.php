@@ -1,7 +1,5 @@
-<?php $this->title = 'Accueil'; ?>
-
-<h1>Mon blog</h1>
-<p>En construction</p>
+<?php $this->title = 'Blog'; ?>
+<h1 class="title-page">Accueil Blog</h1>
 <?= $this->session->show('add_article'); ?>
 <?= $this->session->show('edit_article'); ?>
 <?= $this->session->show('delete_article'); ?>
@@ -13,32 +11,17 @@
 <?= $this->session->show('logout'); ?>
 <?= $this->session->show('delete_account'); ?>
 
-<?php
-if ($this->session->get('pseudo')) {
-    ?>
-    <a href="../public/index.php?route=logout">Déconnexion</a>
-    <a href="../public/index.php?route=profile">Profil</a>
-    <?php if($this->session->get('role') === 'admin') { ?>
-        <a href="../public/index.php?route=administration">Administration</a>
-    <?php } ?>
-    <a href="../public/index.php?route=addArticle">Nouvel article</a>
+<section id="bloglist">
     <?php
-} else {
+    foreach ($articles as $article) {
     ?>
-    <a href="../public/index.php?route=register">Inscription</a>
-    <a href="../public/index.php?route=login">Connexion</a>
+        <div class="blog-list col-md-5 col-sm9 shadow mb-5 bg-white rounded">
+            <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()); ?>"><?= htmlspecialchars($article->getTitle()); ?></a></h2>
+            <p><?= htmlspecialchars($article->getContent()); ?></p>
+            <p><?= htmlspecialchars($article->getAuthor()); ?></p>
+            <p>Créé le : <?= htmlspecialchars($article->getCreatedAt()); ?></p>
+        </div>
     <?php
-}
-foreach ($articles as $article)
-{
+    }
     ?>
-    <div>
-        <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h2>
-        <p><?= htmlspecialchars($article->getContent());?></p>
-        <p><?= htmlspecialchars($article->getAuthor());?></p>
-        <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
-    </div>
-    <br>
-    <?php
-}
-?>
+</section>

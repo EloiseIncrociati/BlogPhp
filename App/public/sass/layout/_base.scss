@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Lobster', cursive;
+    font-weight: 300;
+    color      : $text-title;
+}
+
+* {
+    font-family: 'Itim', cursive;
+    font-weight: 300;
+}
+
+body {
+    background-color: $body-color;
+}
+
+.identity {
+    max-height: 85px;
+}
+
+.container {
+    padding-bottom: 25px;
+    min-height    : 90vh;
+    margin-bottom : 2%;
+}
+
+.cardaccueil {
+    padding: 5px;
+    margin : 15px;
+    color  : $text-color;
+}
+
+.name {
+    display: flex;
+}
+
+.name img {
+    max-height  : 50px;
+    max-width   : 100px;
+    width       : auto;
+    margin-right: 25px;
+}
+
+.center {
+    text-align: center;
+}
+
+.paragraphes {
+    color: $text-color;
+}

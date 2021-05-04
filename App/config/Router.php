@@ -28,9 +28,11 @@ class Router
         try{
             if(isset($route))
             {
+                if($route === 'presentation'){
+                    $this->backController->presentation();
+                }
                 if($route === 'article'){
                     $this->frontController->article($this->request->getGet()->get('articleId'));
-                    
                 }
                 elseif ($route === 'addArticle'){
                     $this->backController->addArticle($this->request->getPost());
