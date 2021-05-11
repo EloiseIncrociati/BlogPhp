@@ -8,6 +8,53 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" href="../public/sass/main.css">
     <script src="https://kit.fontawesome.com/00b127d1df.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["name"];
+            var email = document.forms["myForm"]["email"];
+            var message = document.forms["myForm"]["message"];
+
+            if (name.value == "") {
+                document.getElementById('errorname').innerHTML = "Veuillez entrez un nom valide";
+                name.focus();
+                return false;
+            } else {
+                document.getElementById('errorname').innerHTML = "";
+            }
+
+            if (email.value == "") {
+                document.getElementById('erroremail').innerHTML = "Veuillez entrez une adresse mail valide";
+                email.focus();
+                return false;
+            } else {
+                document.getElementById('erroremail').innerHTML = "";
+            }
+
+            if (email.value.indexOf("@", 0) < 0) {
+                document.getElementById('erroremail').innerHTML = "Veuillez entrez une adresse mail valide";
+                email.focus();
+                return false;
+            }
+
+            if (email.value.indexOf(".", 0) < 0) {
+                document.getElementById('erroremail').innerHTML = "Veuillez entrez une adresse mail valide";
+                email.focus();
+                return false;
+            }
+
+            if (message.value == "") {
+                document.getElementById('errormsg').innerHTML = "Veuillez entrez un message valide";
+                message.focus();
+                return false;
+            } else {
+                document.getElementById('errormsg').innerHTML = "";
+            }
+
+            return true;
+        }
+    </script>
 </head>
 
 <body>

@@ -1,15 +1,5 @@
 <?php $this->title = 'Accueil'; ?>
 <h2>Bienvenue sur mon blog</h2>
-<?= $this->session->show('add_article'); ?>
-<?= $this->session->show('edit_article'); ?>
-<?= $this->session->show('delete_article'); ?>
-<?= $this->session->show('add_comment'); ?>
-<?= $this->session->show('flag_comment'); ?>
-<?= $this->session->show('delete_comment'); ?>
-<?= $this->session->show('register'); ?>
-<?= $this->session->show('login'); ?>
-<?= $this->session->show('logout'); ?>
-<?= $this->session->show('delete_account'); ?>
 
 <section class="blog-section my-5 shadow mb-5 bg-white rounded">
   <i class="fas fa-eye"></i>
@@ -88,12 +78,12 @@
             </li>
             <li class="list-inline-item">
               <a href="https://www.linkedin.com/in/%C3%A9lo%C3%AFse-incrociati-13b083152/?originalSubdomain=fr" class="p-2 fa-lg li-ic">
-                <i class="fab fa-linkedin-in"> </i>
+                <i class="fab fa-linkedin-in"></i>
               </a>
             </li>
             <li class="list-inline-item">
               <a href="https://www.instagram.com/stigdraws/" class="p-2 fa-lg ins-ic">
-                <i class="fab fa-instagram"> </i>
+                <i class="fab fa-instagram"></i>
               </a>
             </li>
           </ul>

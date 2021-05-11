@@ -114,8 +114,8 @@ body {
 }
 
 .container {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #015252), color-stop(12%, #ffffff));
-  background-image: linear-gradient(to bottom, #015252 50%, #ffffff 12%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #015252), color-stop(12%, #cefafa));
+  background-image: linear-gradient(to bottom, #015252 50%, #cefafa 12%);
   border-radius: 15px;
 }
 
