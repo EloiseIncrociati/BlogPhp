@@ -12,6 +12,9 @@
   <div class="btn-wrapper">
     <button type="button" class="btn" onclick="window.location.href='index.php';">Visiter le Blog</button>
   </div>
+  <div class="btn-wrapper">
+    <button type="button" class="btn" onclick="window.location.href='cv.pdf';">Télécharger mon CV</button>
+  </div>
 </section>
 
 <section class="contact-section my-5 shadow p-3 mb-5 bg-white rounded">
@@ -19,56 +22,60 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="card-body form">
-          <h3 class="mt-4"><i class="fas fa-paper-plane"></i> Contact:</h3>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-name" class="form-control">
-                <label for="form-contact-name" class="">Nom</label>
+          <form action="envoi.php" method="post" enctype="application/x-www-form-urlencoded" name="formulaire">
+            <h3 class="mt-4"><i class="fas fa-paper-plane"></i> Contact:</h3>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="text" id="form-contact-name" class="form-control">
+                  <label for="form-contact-name" class="">Nom</label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="md-form mb-0">
+                  <input type="text" id="form-contact-prenom" class="form-control">
+                  <label for="form-contact-prenom" class="">Prénom</label>
+                </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-prenom" class="form-control">
-                <label for="form-contact-prenom" class="">Prénom</label>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="md-form mb-0">
+                  <input type="text" id="form-contact-email" class="form-control">
+                  <label for="form-contact-email" class="">Email</label>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="md-form mb-0">
-                <input type="text" id="form-contact-email" class="form-control">
-                <label for="form-contact-email" class="">Email</label>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="md-form mb-0">
+                  <textarea id="form-contact-message" class="form-control md-textarea" rows="3"></textarea>
+                  <label for="form-contact-message">Your message</label>
+                  <a class="btn-floating btn-lg">
+                    <i class="far fa-paper-plane"></i>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="md-form mb-0">
-                <textarea id="form-contact-message" class="form-control md-textarea" rows="3"></textarea>
-                <label for="form-contact-message">Your message</label>
-                <a class="btn-floating btn-lg">
-                  <i class="far fa-paper-plane"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
       <div class="col-lg-4">
-        <div class="card-body contact text-center h-100 white-text">
+        <div id="reseaux" class="card-body contact text-center h-100 white-text">
           <h3 class="my-4 pb-2">Contact information</h3>
-          <ul class="text-lg-left list-unstyled ml-4">
-            <li>
-              <p><i class="far fa-address-card"></i> Eloïse Incrociati</p>
-            </li>
-            <li>
-              <p><i class="fas fa-phone pr-2"></i> 07 61 12 00 00</p>
-            </li>
-            <li>
-              <p><i class="fas fa-envelope pr-2"></i> foliomoon@gmail.com</p>
-            </li>
-          </ul>
+          <form method="post" action="" enctype="">
+            <ul class="text-lg-left list-unstyled">
+              <li>
+                <p><i class="far fa-address-card"></i> Eloïse Incrociati</p>
+              </li>
+              <li>
+                <p><i class="fas fa-phone pr-2"></i> 07 61 12 00 00</p>
+              </li>
+              <li>
+                <p><i class="fas fa-envelope pr-2"></i> foliomoon@gmail.com</p>
+              </li>
+            </ul>
+          </form>
           <hr class="hr-light my-4">
           <ul class="list-inline text-center list-unstyled">
             <li class="list-inline-item">

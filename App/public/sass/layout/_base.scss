@@ -28,7 +28,6 @@ body {
 
 .cardaccueil {
     padding: 5px;
-    margin : 15px;
     color  : $text-color;
 }
 
@@ -49,4 +48,13 @@ body {
 
 .paragraphes {
     color: $text-color;
+}
+
+section{
+    @include responsive($sm){
+        width: 95%;
+    }
+    @include responsive($med){
+        width: 65%;
+    }
 }
