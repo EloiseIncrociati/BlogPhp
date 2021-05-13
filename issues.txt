@@ -1,0 +1,37 @@
+ISSUES : 
+|	|UML Diagramms with Paradigm			1Day
+|	|	|
+|	|Configuration					1Hour
+|	|	|Server Ampps + Visual Studio Code
+|	|Database Class					1Day
+|	|Article Class					1Day
+|	|Comment Class					1Day
+|	|Namespaces					1Day
+|	|Autoloader					2Day
+|	|	|Composer Autoloader
+|	|FrontController				2Day
+|	|Router						1Day
+|	|Controller					2Day
+|	|Model						1Day
+|	|View						1Day
+|	|Add Article					1Day
+|	|Controller Class				2Day
+|	|Request Class					2Day
+|	|Session Class					4Day
+|	|Edit Article					1Day
+|	|Forms						2Day
+|	|Validation					2Day
+|	|Delete Article					1Day
+|	|	|Delete linked Comment			1Day
+|	|Add Comments					1Day
+|	|Flag Comments					2Day
+|	|Delete Comments				1Day
+|	|Inscription					2Day
+|	|Connexion/Deconnexion				1Day
+|	|Delete Account					1Day
+|	|Administration					6Day
+|	|	|Administration Articles
+|	|	|Administration Comments
+|	|	|Administration Users
+|	|Security					8Day
+
