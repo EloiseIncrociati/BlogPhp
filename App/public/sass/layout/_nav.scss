@@ -5,3 +5,11 @@ nav {
 nav li {
     list-style-type: none;
 }
+
+nav a{
+    color: $btn-color;
+}
+
+.navbar-toggler-icon{
+    color: $btn-color;
+}

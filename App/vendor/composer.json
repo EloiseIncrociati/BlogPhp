@@ -1,0 +1,7 @@
+{
+    "name": "blog/mailer",
+    "description": "System de gestion envoi de mail",
+    "require": {
+        "swiftmailer/swiftmailer": "^6.2"
+    }
+}

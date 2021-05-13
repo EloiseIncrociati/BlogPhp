@@ -31,7 +31,7 @@ class Router
                 if($route === 'presentation'){
                     $this->backController->presentation();
                 }
-                if($route === 'article'){
+                elseif($route === 'article'){
                     $this->frontController->article($this->request->getGet()->get('articleId'));
                 }
                 elseif ($route === 'addArticle'){

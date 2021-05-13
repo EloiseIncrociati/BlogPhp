@@ -9,11 +9,10 @@
     </div>
     <div class="actions">
         <?php if ($this->session->get('role') === 'admin') { ?>
-            <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
+            <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a><br>
             <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
         <?php } ?>
     </div>
-    <a href="../public/index.php">Retour à l'accueil</a>
     <br>
     <div id="comments" class="text-left">
         <br>
@@ -35,10 +34,10 @@
             } else {
             ?>
                 <p><a href="../public/index.php?route=flagComment&commentId=<?= $comment->getId(); ?>">Signaler le commentaire</a></p>
-            <?php
-            }
-            ?>
+            <?php }
+            if($this->session->get('role') === 'admin') { ?>
             <p><a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a></p>
+            <?php } ?>
             <br>
         <?php
         }
@@ -47,3 +46,7 @@
     <br>
     <br>
 </section>
+<div class="center footer">
+    <a href="../public/index.php?route=presentation">Retour à l'accueil</a>
+    <a href="../public/index.php">Retour au blog</a>
+</div>
