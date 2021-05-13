@@ -1,0 +1,105 @@
+STRUCTURE DE NOTRE APPLICATION PHP : 
+
+P5BLOG :
+App/
+|	|-cgi-bin
+|	|-config
+|	|	|-dev.php
+|	|	|-Parameter.php
+|	|	|-Request.php
+|	|	|-Router.php
+|	|	|-Session.php
+|	|-public
+|	|	|-css
+|	|	|	|-main.css
+|	|	|-fonts
+|	|	|	|-Itim-Regular.ttf
+|	|	|	|-Lobster-Regular.ttf
+|	|	|-img
+|	|	|	|-deposit.jpg
+|	|	|	|-depositphotos_prulpe.jpg
+|	|	|-js
+|	|	|-sass
+|	|	|	|-abstract
+|	|	|	|	|-_mixins.scss
+|	|	|	|	|-_variables.scss
+|	|	|	|-components
+|	|	|	|	|-_buttons.scss
+|	|	|	|-layout
+|	|	|	|	|-_base.scss
+|	|	|	|	|-_footer.scss
+|	|	|	|	|-_forms.scss
+|	|	|	|	|-_nav.scss
+|	|	|	|-pages
+|	|	|	|	|-_admin.scss
+|	|	|	|	|-_bloglist.scss
+|	|	|	|	|-_home.scss
+|	|	|	|	|-_presentation.scss
+|	|	|	|-main.css
+|	|	|	|-main.css.map
+|	|	|	|-main.scss
+|	|	|-cv.pdf
+|	|	|-index.php
+|	|-src
+|	|	|-Constraint
+|	|	|	|-ArticleValidation.php
+|	|	|	|-CommentValidation.php
+|	|	|	|-Constraint.php
+|	|	|	|-UserValidation.php
+|	|	|	|-Validation.php
+|	|	|-Controller
+|	|	|	|-BackController.php
+|	|	|	|-Controller.php
+|	|	|	|-ErrorController.php
+|	|	|	|-FrontController.php
+|	|	|-Manager
+|	|	|	|-ArticleManager.php
+|	|	|	|-CommentManager.php
+|	|	|	|-DatabaseManager.php
+|	|	|	|-UserManager.php
+|	|	|-Model
+|	|	|	|-Article.php
+|	|	|	|-Comment.php
+|	|	|	|-User.php
+|	|	|	|-View.php
+|	|-vendor
+|	|	|-composer
+|	|	|-doctrine
+|	|	|-egulias
+|	|	|-swiftmailer
+|	|	|-symfony
+|	|	|-vendor
+|	|	|-autoload.php
+|	|-composer.json
+|	|-composer.lock
+|	|-views
+|	|	|-add_article.php
+|	|	|-administration.php
+|	|	|-base.php
+|	|	|-edit_article.php
+|	|	|-error404.php
+|	|	|-error500.php
+|	|	|-form_article.php
+|	|	|-form_comment.php
+|	|	|-home.php
+|	|	|-login.php
+|	|	|-presentation.php
+|	|	|-profile.php
+|	|	|-register.php
+|	|	|-single.php
+|	|	|-update_password.php
+-composer.json
+-composer.lock
+|	
+cgi-bin
+|
+sql
+|	|-administration.sql
+|	|-article.sql
+|	|-authorModify.sql
+|	|-comment.sql
+|	|-db.sql
+|	|-flag.sql
+|	|-users.sql
+|	
+|gitignore
