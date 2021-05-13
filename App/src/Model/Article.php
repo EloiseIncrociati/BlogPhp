@@ -14,6 +14,11 @@ class Article
      */
     private $title;
 
+     /**
+     * @var string
+     */
+    private $chapo;
+
     /**
      * @var string
      */
@@ -64,6 +69,22 @@ class Article
     /**
      * @return string
      */
+    public function getChapo()
+    {
+        return $this->chapo;
+    }
+
+    /**
+     * @param string $chapo
+     */
+    public function setChapo($chapo)
+    {
+        $this->chapo = $chapo;
+    }
+
+    /**
+     * @return string
+     */
     public function getContent()
     {
         return $this->content;
@@ -107,5 +128,21 @@ class Article
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param \DateTime $updatedAt
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
     }
 }

@@ -3,9 +3,11 @@
 <section class="blog-section my-5 shadow mb-5 bg-white rounded">
     <div>
         <h2><?= htmlspecialchars($article->getTitle()); ?></h2>
+        <p><?= htmlspecialchars($article->getChapo()); ?></p>
         <p><?= htmlspecialchars($article->getContent()); ?></p>
         <p><?= htmlspecialchars($article->getAuthor()); ?></p>
         <p>Créé le : <?= htmlspecialchars($article->getCreatedAt()); ?></p>
+        <p>Mis à jour le : <?= htmlspecialchars($article->getUpdatedAt()); ?></p>
     </div>
     <div class="actions">
         <?php if ($this->session->get('role') === 'admin') { ?>
