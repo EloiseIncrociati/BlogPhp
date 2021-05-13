@@ -23,6 +23,7 @@
         foreach ($comments as $comment) {
         ?>
             <h4><?= htmlspecialchars($comment->getPseudo()); ?></h4>
+            <p><?= htmlspecialchars($comment->getChapo()); ?></p>
             <p><?= htmlspecialchars($comment->getContent()); ?></p>
             <p>Posté le <?= htmlspecialchars($comment->getCreatedAt()); ?></p>
             <?php

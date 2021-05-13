@@ -11,6 +11,9 @@ if ($this->session->get('role') === 'admin') { ?>
                 <label for="title">Titre</label><br>
                 <input class="form-control" type="text" id="title" name="title" value="<?= isset($post) ? htmlspecialchars($post->get('title')) : ''; ?>"><br>
                 <?= isset($errors['title']) ? $errors['title'] : ''; ?>
+                <label for="chapo">Chapo</label><br>
+                <input class="form-control" type="text" id="chapo" name="chapo" value="<?= isset($post) ? htmlspecialchars($post->get('chapo')) : ''; ?>"><br>
+                <?= isset($errors['chapo']) ? $errors['chapo'] : ''; ?>
                 <label for="content">Contenu</label><br>
                 <textarea class="form-control" id="content" name="content"><?= isset($post) ? htmlspecialchars($post->get('content')) : ''; ?></textarea><br>
                 <?= isset($errors['content']) ? $errors['content'] : ''; ?>
