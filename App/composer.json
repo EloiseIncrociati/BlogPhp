@@ -4,5 +4,8 @@
       "App\\config\\":"config/",
       "App\\src\\": "src/"
     }
+  },
+  "require": {
+    "swiftmailer/swiftmailer": "^6.2"
   }
 }

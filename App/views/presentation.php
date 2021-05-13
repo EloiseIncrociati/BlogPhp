@@ -1,6 +1,8 @@
 <?php $this->title = 'Accueil'; ?>
 <h2>Bienvenue sur mon blog</h2>
+<?php
 
+?>
 <section class="blog-section my-5 shadow mb-5 bg-white rounded">
   <i class="fas fa-eye"></i>
   <h3>Qui suis-je ?</h3>
@@ -17,45 +19,41 @@
   </div>
 </section>
 
-<section class="contact-section my-5 shadow p-3 mb-5 bg-white rounded">
+<section id="box" class="contact-section my-5 shadow p-3 mb-5 bg-white rounded">
   <div class="card">
     <div class="row">
       <div class="col-lg-8">
         <div class="card-body form">
-          <form action="envoi.php" method="post" enctype="application/x-www-form-urlencoded" name="formulaire">
+          <form id="form" enctype="multipart/form-data" onsubmit="return validate()" method="post">
             <h3 class="mt-4"><i class="fas fa-paper-plane"></i> Contact:</h3>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-12">
                 <div class="md-form mb-0">
-                  <input type="text" id="form-contact-name" class="form-control">
-                  <label for="form-contact-name" class="">Nom</label>
+                  <label>Nom: <span>*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Nom" class="form-control"/>
                 </div>
-              </div>
-              <div class="col-md-6">
                 <div class="md-form mb-0">
-                  <input type="text" id="form-contact-prenom" class="form-control">
-                  <label for="form-contact-prenom" class="">Prénom</label>
+                  <label>Email: <span>*</span></label><span id="info" class="info"></span>
+                  <input type="text" id="email" name="email" placeholder="Email" class="form-control" />
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12">
                 <div class="md-form mb-0">
-                  <input type="text" id="form-contact-email" class="form-control">
-                  <label for="form-contact-email" class="">Email</label>
+                  <label>Message:</label>
+                  <textarea id="message" class="form-control md-textarea" name="message" placeholder="Message..."></textarea>
+                  <input type="submit" name="send" value="Envoyer" /><i class="far fa-paper-plane"></i>
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="md-form mb-0">
-                  <textarea id="form-contact-message" class="form-control md-textarea" rows="3"></textarea>
-                  <label for="form-contact-message">Your message</label>
-                  <a class="btn-floating btn-lg">
-                    <i class="far fa-paper-plane"></i>
-                  </a>
-                </div>
-              </div>
+            <div id="statusMessage">
+              <?php if (!empty($db_msg)) { ?>
+                <p class='<?php echo $type_db_msg; ?>Message'><?php echo $db_msg; ?></p>
+              <?php } ?>
+              <?php if (!empty($mail_msg)) { ?>
+                <p class='<?php echo $type_mail_msg; ?>Message'><?php echo $mail_msg; ?></p>
+              <?php } ?>
             </div>
           </form>
         </div>

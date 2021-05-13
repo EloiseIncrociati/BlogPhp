@@ -89,6 +89,40 @@ body {
       justify-content: space-around;
 }
 
+input[type=submit] {
+  border: 1px solid white;
+  color: black;
+}
+
+span {
+  color: red;
+}
+
+.successMessage {
+  background-color: #7acc7d;
+  border: #2b5a2d 1px solid;
+  padding: 5px 9px;
+  color: #262b26;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.errorMessage {
+  background-color: #e64141;
+  border: #da1414 1px solid;
+  padding: 5px 10px;
+  color: #fdf7f7;
+  border-radius: 4px;
+}
+
+.info {
+  font-size: 0.9em;
+  color: #d67262;
+  letter-spacing: 2px;
+  padding-left: 5px;
+}
+
 .btn-wrapper {
   width: 100%;
   text-align: center;

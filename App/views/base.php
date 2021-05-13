@@ -16,48 +16,34 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script>
-        function validateForm() {
-            var name = document.forms["myForm"]["name"];
-            var email = document.forms["myForm"]["email"];
-            var message = document.forms["myForm"]["message"];
-
-            if (name.value == "") {
-                document.getElementById('errorname').innerHTML = "Veuillez entrez un nom valide";
-                name.focus();
-                return false;
-            } else {
-                document.getElementById('errorname').innerHTML = "";
+        function validate() {
+            var isValid = true;
+            var name = $("#name").val();
+            var email = $("#email").val();
+            var subject = $("#subject").val();
+            var message = $("#message").val();
+            if (name == "") {
+                $("#name").css('border', '#fb0505 1px solid');
+                isValid = false;
             }
-
-            if (email.value == "") {
-                document.getElementById('erroremail').innerHTML = "Veuillez entrez une adresse mail valide";
-                email.focus();
-                return false;
-            } else {
-                document.getElementById('erroremail').innerHTML = "";
+            if (email == "") {
+                $("#email").css('border', '#fb0505 1px solid');
+                isValid = false;
             }
-
-            if (email.value.indexOf("@", 0) < 0) {
-                document.getElementById('erroremail').innerHTML = "Veuillez entrez une adresse mail valide";
-                email.focus();
-                return false;
+            if (!email.match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)) {
+                $("#info").html("(Adresse email non valide)");
+                $("#email").css('border', '#fb0505 1px solid');
+                isValid = false;
             }
-
-            if (email.value.indexOf(".", 0) < 0) {
-                document.getElementById('erroremail').innerHTML = "Veuillez entrez une adresse mail valide";
-                email.focus();
-                return false;
+            if (subject == "") {
+                $("#subject").css('border', '#fb0505 1px solid');
+                isValid = false;
             }
-
-            if (message.value == "") {
-                document.getElementById('errormsg').innerHTML = "Veuillez entrez un message valide";
-                message.focus();
-                return false;
-            } else {
-                document.getElementById('errormsg').innerHTML = "";
+            if (message == "") {
+                $("#message").css('border', '#fb0505 1px solid');
+                isValid = false;
             }
-
-            return true;
+            return isValid;
         }
     </script>
 </head>
