@@ -16,7 +16,7 @@ updatedAt datetime
 
 INSERT INTO article (id, title, chapo, content, createdAt) VALUES
 
-(1, 'Voici mon premier article', ,'Mon super blog', 'Mon super blog est en construction.', '2019-03-15 08:10:24'),
+(1, 'Voici mon premier article', 'chapo','Mon super blog', 'Mon super blog est en construction.', '2019-03-15 08:10:24'),
 
 (2, 'Un deuxième article', 'Contenu', 'Je continue à ajouter du contenu sur mon blog.', '2019-03-16 13:27:38'),
 
