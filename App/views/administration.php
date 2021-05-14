@@ -6,13 +6,14 @@
 <?= $this->session->show('unflag_comment'); ?>
 <?= $this->session->show('delete_comment'); ?>
 <?= $this->session->show('delete_user'); ?>
-<section class="blog-section admin my-5 shadow mb-5 bg-white rounded">
+<section id= "admin-article" class="blog-section admin my-5 shadow mb-5 bg-white rounded">
     <h2>Articles</h2>
     <br>
     <table class="tableaux">
         <tr class="tableaux-title">
             <td>Id</td>
             <td>Titre</td>
+            <td>Chapo</td>
             <td>Contenu</td>
             <td>Auteur</td>
             <td>Date</td>
@@ -24,6 +25,7 @@
             <tr>
                 <td><?= htmlspecialchars($article->getId()); ?></td>
                 <td><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId()); ?>"><?= htmlspecialchars($article->getTitle()); ?></a></td>
+                <td><?= substr(htmlspecialchars($article->getChapo()), 0, 150); ?></td>
                 <td><?= substr(htmlspecialchars($article->getContent()), 0, 150); ?></td>
                 <td><?= htmlspecialchars($article->getAuthor()); ?></td>
                 <td>Créé le : <?= htmlspecialchars($article->getCreatedAt()); ?></td>

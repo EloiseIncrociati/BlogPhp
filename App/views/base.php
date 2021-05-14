@@ -64,11 +64,16 @@
                     <?php
                     if ($this->session->get('pseudo')) {
                     ?>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="../public/index.php?route=logout">Déconnexion</a>
-                        </li>
                         <li>
                             <a class="nav-link" href="../public/index.php?route=profile">Profil</a>
+                        </li>
+                        <?php if ($this->session->get('role') === 'admin') { ?>
+                        <li>
+                            <a class="nav-link" href="../public/index.php?route=administration">Administration</a>
+                        </li>
+                    <?php } ?>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="../public/index.php?route=logout">Déconnexion</a>
                         </li>
                     <?php } else { ?>
                         <li class="nav-item">
@@ -78,11 +83,7 @@
                             <a class="nav-link" href="../public/index.php?route=login">Connexion</a>
                         </li>
                     <?php }
-                    if ($this->session->get('role') === 'admin') { ?>
-                        <li>
-                            <a class="nav-link" href="../public/index.php?route=administration">Administration</a>
-                        </li>
-                    <?php } ?>
+                    ?>
                 </ul>
             </div>
         </nav>
