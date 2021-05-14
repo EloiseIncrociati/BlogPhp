@@ -6,7 +6,7 @@
   <h2>Bienvenue, <?= $this->session->get('pseudo'); ?></h2>
   <p>Votre identifiant est le : <?= $this->session->get('id'); ?></p>
   <div class="btn-wrapper">
-    <button type="button" class="btn" onclick="window.location.href='index.php.php?route=updatePassword';">Modifier son mot de passe</button>
+    <button type="button" class="btn" onclick="window.location.href='index.php.php?route=updatePassword';">Editer Password</button>
   </div>
   <div class="btn-wrapper">
     <button type="button" class="btn" onclick="window.location.href='index.php.php?route=deleteAccount';">Supprimer mon compte</button>

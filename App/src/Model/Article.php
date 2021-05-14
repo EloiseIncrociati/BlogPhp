@@ -17,6 +17,11 @@ class Article
     /**
      * @var string
      */
+    private $chapo;
+
+    /**
+     * @var string
+     */
     private $content;
 
     /**
@@ -59,6 +64,22 @@ class Article
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getChapo()
+    {
+        return $this->chapo;
+    }
+
+    /**
+     * @param string $chapo
+     */
+    public function setChapo($chapo)
+    {
+        $this->chapo = $chapo;
     }
 
     /**

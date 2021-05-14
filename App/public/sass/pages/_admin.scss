@@ -1,3 +1,12 @@
+#admin-article{
+    @include responsive($lg){
+            width: 90%;
+    }
+    @include responsive($xs){
+        width: 80%;
+    }
+}
+
 .tableaux {
     font-family    : Arial, Helvetica, sans-serif;
     border-collapse: collapse;

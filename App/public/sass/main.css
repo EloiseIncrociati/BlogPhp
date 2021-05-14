@@ -236,6 +236,18 @@ span {
   margin-bottom: 25px;
 }
 
+@media (min-width: 60em) {
+  #admin-article {
+    width: 90%;
+  }
+}
+
+@media (min-width: 20em) {
+  #admin-article {
+    width: 80%;
+  }
+}
+
 .tableaux {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;

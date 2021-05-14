@@ -84,6 +84,7 @@ class BackController extends Controller
         }
         $post->set('id', $article->getId());
         $post->set('title', $article->getTitle());
+        $post->set('chapo', $article->getChapo());
         $post->set('content', $article->getContent());
         $post->set('author', $article->getAuthor());
 
