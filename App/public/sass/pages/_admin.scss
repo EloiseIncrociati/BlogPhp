@@ -13,12 +13,14 @@
     width          : 100%;
     border-collapse: collapse;
     border-radius  : 10px;
+    table-layout: fixed;
 }
 
 .tableaux td,
 .tableaux th {
     border : 1px solid #ddd;
     padding: 8px;
+    overflow: hidden;
 }
 
 .tableaux tr:nth-child(even) {
