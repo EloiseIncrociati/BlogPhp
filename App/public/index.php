@@ -7,7 +7,7 @@ session_start();
 $router = new \App\config\Router();
 $router->run();
 
-  if(!empty($_POST["send"])) {
+/*  if(!empty($_POST["send"])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $subject = $_POST["subject"];
@@ -21,5 +21,5 @@ $router->run();
       $mail_msg = "Erreur lors de l'envoi de l'e-mail.";
       $type_mail_msg = "error";
     }
-  }
+  }*/
 ?>

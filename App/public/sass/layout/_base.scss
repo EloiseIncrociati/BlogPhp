@@ -50,11 +50,12 @@ body {
     color: $text-color;
 }
 
-section{
-    @include responsive($sm){
+section {
+    @include responsive($sm) {
         width: 95%;
     }
-    @include responsive($med){
+
+    @include responsive($med) {
         width: 65%;
     }
 }

@@ -24,16 +24,46 @@
     <div class="row">
       <div class="col-lg-8">
         <div class="card-body form">
-          <form id="form" enctype="multipart/form-data" onsubmit="return validate()" method="post">
+        <?php
+        if(isset($_POST['sendmail'])){
+          require_once '../vendor/autoload.php';
+        
+          try {
+              // Create the Transport
+              $transport = (new Swift_SmtpTransport('smtp.googlemail.com', 465, 'ssl'))
+                ->setUsername('foliomoon@gmail.com')
+                ->setPassword('scrat13stig')
+              ;
+          
+              // Create the Mailer using your created Transport
+              $mailer = new Swift_Mailer($transport);
+              //var_dump($_POST);exit;
+              $message = (new Swift_Message($_POST['subject']))
+                //->setFrom([[$_POST['email']] => $_POST['name']])
+                ->setFrom([$_POST['email'] => $_POST['name']])
+                ->setTo(['foliomoon@gmail.com' => 'foliomoon'])
+                ->setBody($_POST['message'] . ' ' . $_POST['email'] . ' ' . $_POST['name'])
+              ;
+          
+              // Send the message
+              $mailer->send($message);
+          
+              echo 'Email has been sent.';
+          } catch(Exception $e) {
+              echo $e->getMessage();
+          }
+        }
+        ?>
+          <form id="form" enctype="multipart/form-data" method="post">
             <h3 class="mt-4"><i class="fas fa-paper-plane"></i> Contact:</h3>
             <div class="row">
               <div class="col-md-12">
                 <div class="md-form mb-0">
-                  <label>Nom: <span>*</span></label>
+                  <label for="name">Nom: <span>*</span></label>
                   <input type="text" id="name" name="name" placeholder="Nom" class="form-control"/>
                 </div>
                 <div class="md-form mb-0">
-                  <label>Email: <span>*</span></label><span id="info" class="info"></span>
+                  <label for="email">Email: <span>*</span></label><span id="info" class="info"></span>
                   <input type="text" id="email" name="email" placeholder="Email" class="form-control" />
                 </div>
               </div>
@@ -41,19 +71,11 @@
             <div class="row">
               <div class="col-md-12">
                 <div class="md-form mb-0">
-                  <label>Message:</label>
+                  <label for="message">Message:</label>
                   <textarea id="message" class="form-control md-textarea" name="message" placeholder="Message..."></textarea>
-                  <input type="submit" name="send" value="Envoyer" /><i class="far fa-paper-plane"></i>
+                  <input id="btn-envoyer" type="submit" name="sendmail" value="Envoyer" /><i class="far fa-paper-plane"></i>
                 </div>
               </div>
-            </div>
-            <div id="statusMessage">
-              <?php if (!empty($db_msg)) { ?>
-                <p class='<?php echo $type_db_msg; ?>Message'><?php echo $db_msg; ?></p>
-              <?php } ?>
-              <?php if (!empty($mail_msg)) { ?>
-                <p class='<?php echo $type_mail_msg; ?>Message'><?php echo $mail_msg; ?></p>
-              <?php } ?>
             </div>
           </form>
         </div>
