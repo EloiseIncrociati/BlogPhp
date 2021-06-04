@@ -16,17 +16,6 @@ class BackController extends Controller
         }
     }
 
-    private function checkAdmin()
-    {
-        $this->checkLoggedIn();
-        if(!($this->session->get('role') === 'admin')) {
-            $this->session->set('not_admin', 'Vous n\'avez pas le droit d\'accéder à cette page');
-            header('Location: ../public/index.php?route=profile');
-        } else {
-            return true;
-        }
-    }
-
     public function presentation()
     {
         $users = $this->userManager->getUsers();

@@ -1,8 +1,9 @@
-#admin-article{
-    @include responsive($lg){
-            width: 90%;
+#admin-article {
+    @include responsive($lg) {
+        width: 90%;
     }
-    @include responsive($xs){
+
+    @include responsive($xs) {
         width: 80%;
     }
 }
@@ -13,12 +14,14 @@
     width          : 100%;
     border-collapse: collapse;
     border-radius  : 10px;
+    table-layout   : fixed;
 }
 
 .tableaux td,
 .tableaux th {
-    border : 1px solid #ddd;
-    padding: 8px;
+    border  : 1px solid #ddd;
+    padding : 8px;
+    overflow: hidden;
 }
 
 .tableaux tr:nth-child(even) {
