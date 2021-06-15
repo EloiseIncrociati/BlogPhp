@@ -10,8 +10,8 @@
     </div> 
     <div class="actions">
         <?php if ($this->session->get('role') === 'admin') { ?>
-            <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a><br>
-            <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
+            <a href="../public/index.php?route=editArticle&articleId=<?= htmlspecialchars($article->getId()); ?>">Modifier</a><br>
+            <a href="../public/index.php?route=deleteArticle&articleId=<?= htmlspecialchars($article->getId()); ?>">Supprimer</a>
         <?php } ?>
     </div>
     <br>

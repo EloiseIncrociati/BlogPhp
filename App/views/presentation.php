@@ -39,10 +39,10 @@
               $mailer = new Swift_Mailer($transport);
               //var_dump($_POST);exit;
               $message = (new Swift_Message($_POST['subject']))
-                //->setFrom([[$_POST['email']] => $_POST['name']])
-                ->setFrom([$_POST['email'] => $_POST['name']])
+                //->setFrom([$_POST['email'] => $_POST['name']])
+                ->setFrom([filter_input(INPUT_POST, 'email') => filter_input(INPUT_POST, 'name')])
                 ->setTo(['foliomoon@gmail.com' => 'foliomoon'])
-                ->setBody($_POST['message'] . ' ' . $_POST['email'] . ' ' . $_POST['name'])
+                ->setBody('Cet email est de' . ' ' . filter_input(INPUT_POST, 'email') . ' dont le pseudo est ' . filter_input(INPUT_POST, 'name') . ' et le message est le suivant : ' . filter_input(INPUT_POST, 'message'))
               ;
           
               // Send the message

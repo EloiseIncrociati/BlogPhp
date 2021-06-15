@@ -3,7 +3,7 @@
 <p>Bienvenue dans votre espace personnel.</p>
 <?= $this->session->show('update_password'); ?>
 <section class="blog-section my-5 shadow mb-5 bg-white rounded">
-  <h2>Bienvenue, <?= $this->session->get('pseudo'); ?></h2>
+  <h2>Bienvenue, <?= $this->session->get(htmlspecialchars('pseudo')); ?></h2>
   <p>Votre identifiant est le : <?= $this->session->get('id'); ?></p>
   <div class="btn-wrapper">
     <button type="button" class="btn" onclick="window.location.href='index.php?route=updatePassword';">Editer Password</button>
