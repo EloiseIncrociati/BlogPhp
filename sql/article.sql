@@ -1,4 +1,4 @@
-CREATE TABLE article (
+CREATE TABLE `article` (
 
 id int(11) NOT NULL,
 
@@ -14,7 +14,7 @@ updatedAt datetime
 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO article (id, title, chapo, content, createdAt) VALUES
+INSERT INTO `article` (id, title, chapo, content, createdAt) VALUES
 
 (1, 'Voici mon premier article', 'chapo','Mon super blog', 'Mon super blog est en construction.', '2019-03-15 08:10:24'),
 
@@ -22,10 +22,10 @@ INSERT INTO article (id, title, chapo, content, createdAt) VALUES
 
 (3, 'Mon troisième article', 'blog !', 'Mon blog est génial !!!', '2019-03-16 14:45:57');
 
-ALTER TABLE article
+ALTER TABLE `article`
 
 ADD PRIMARY KEY (id);
 
-ALTER TABLE article
+ALTER TABLE `article`
 
 MODIFY id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
