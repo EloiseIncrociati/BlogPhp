@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Itim&family=Lobster&display=swap");
+
 nav {
   vertical-align: top;
 }
@@ -30,7 +31,7 @@ h4 {
 }
 
 body {
-  background-color: #1F7A8C;
+  background-color: #1f7a8c;
 }
 
 .identity {
@@ -41,11 +42,13 @@ body {
   padding-bottom: 25px;
   min-height: 90vh;
   margin-bottom: 2%;
+  background-image: linear-gradient(to bottom, #015252 400px, #cefafa 12%);
+  border-radius: 15px;
 }
 
 .cardaccueil {
   padding: 5px;
-  color: #BFDBF7;
+  color: #bfdbf7;
 }
 
 .name {
@@ -86,7 +89,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+    justify-content: space-around;
 }
 
 input[type=submit] {
@@ -132,13 +135,13 @@ span {
 .btn {
   display: inline-block;
   -webkit-box-shadow: none;
-          box-shadow: none;
+    box-shadow: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+    -moz-appearance: none;
+  appearance: none;
   border: 0;
   outline: 0;
-  background-color: #02C9C9;
+  background-color: #02c9c9;
   height: 45px;
   line-height: 42px;
   padding: 0 30px;
@@ -146,24 +149,24 @@ span {
   border-radius: 30px;
   color: #283132;
   cursor: pointer;
-  -webkit-transition: all .5s;
+  -webkit-transition: all 0.5s;
   transition: all .5s;
   -webkit-transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
-          transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
+  transition-timing-function: cubic-bezier(0.2, 3, 0.4, 1);
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+    user-select: none;
 }
 
 .btn:hover {
   -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
 }
 
 .btn:active {
   -webkit-transform: scale(1.05, 1.05);
-          transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
 }
 
 #btn-envoyer {
@@ -173,8 +176,8 @@ span {
 }
 
 .container {
-  background-image: linear-gradient(to bottom, #015252 400px, #cefafa 12%);
-  border-radius: 15px;
+
+
 }
 
 .topspace {
@@ -231,10 +234,10 @@ span {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+    justify-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
 }
 
