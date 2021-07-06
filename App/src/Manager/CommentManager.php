@@ -9,6 +9,7 @@ class CommentManager extends DatabaseManager
 {
     private function buildObject($row)
     {
+        //construction de l'objet Commentaire
         $comment = new Comment();
         $comment->setId($row['id']);
         $comment->setPseudo($row['pseudo']);

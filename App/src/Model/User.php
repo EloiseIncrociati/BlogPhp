@@ -4,6 +4,7 @@ namespace App\src\Model;
 
 class User
 {
+    //Identité des utilisateurs
     /**
      * @var int
      */

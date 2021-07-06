@@ -4,6 +4,7 @@ namespace App\src\model;
 
 class Article
 {
+    //Identité de l'article
     /**
      * @var int
      */

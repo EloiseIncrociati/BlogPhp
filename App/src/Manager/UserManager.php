@@ -9,6 +9,7 @@ class UserManager extends DatabaseManager
 {
     private function buildObject($row)
     {
+        //construction de l'objet Utilisateur
         $user = new User();
         $user->setId($row['id']);
         $user->setPseudo($row['pseudo']);
@@ -19,6 +20,7 @@ class UserManager extends DatabaseManager
 
     public function getUsers()
     {
+        //récupère les utilisateurs
         $sql = 'SELECT user.id, user.pseudo, user.createdAt, role.name FROM user INNER JOIN role ON user.role_id = role.id ORDER BY user.id DESC';
         $result = $this->createQuery($sql);
         $users = [];
@@ -32,6 +34,7 @@ class UserManager extends DatabaseManager
 
     public function register(Parameter $post)
     {
+        //s'enregistrer
         $this->checkUser($post);
         $sql = 'INSERT INTO user (pseudo, password, createdAt, role_id) VALUES (?, ?, NOW(), ?)';
         $this->createQuery($sql, [$post->get('pseudo'), password_hash($post->get('password'), PASSWORD_BCRYPT), 2]);
@@ -39,6 +42,7 @@ class UserManager extends DatabaseManager
 
     public function checkUser(Parameter $post)
     {
+        //vérifier que l'utilisateur n'existe pas déjà
         $sql = 'SELECT COUNT(pseudo) FROM user WHERE pseudo = ?';
         $result = $this->createQuery($sql, [$post->get('pseudo')]);
         $isUnique = $result->fetchColumn();
@@ -49,6 +53,7 @@ class UserManager extends DatabaseManager
 
     public function login(Parameter $post)
     {
+        //Connection
         $sql = 'SELECT user.id, user.role_id, user.password, role.name FROM user INNER JOIN role ON role.id = user.role_id WHERE pseudo = ?';
         $data = $this->createQuery($sql, [$post->get('pseudo')]);
         $result = $data->fetch();
@@ -61,18 +66,21 @@ class UserManager extends DatabaseManager
 
     public function updatePassword(Parameter $post, $pseudo)
     {
+        //mise à jour du mot de passe
         $sql = 'UPDATE user SET password = ? WHERE pseudo = ?';
         $this->createQuery($sql, [password_hash($post->get('password'), PASSWORD_BCRYPT), $pseudo]);
     }
 
     public function deleteAccount($pseudo)
     {
+        //supprimer le compte
         $sql = 'DELETE FROM user WHERE pseudo = ?';
         $this->createQuery($sql, [$pseudo]);
     }
 
     public function deleteUser($userId)
     {
+        //supprimer un utilisateur
         $sql = 'DELETE FROM user WHERE id = ?';
         $this->createQuery($sql, [$userId]);
     }

@@ -4,6 +4,7 @@ namespace App\src\constraint;
 
 class Validation
 {
+    //Fait appel à nos validations pour vérifier articles, commentaires et utilisateurs.
     public function validate($data, $name)
     {
         if($name === 'Article') {

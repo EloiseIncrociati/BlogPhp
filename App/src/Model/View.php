@@ -10,7 +10,7 @@ class View
     private $title;
     private $request;
     private $session;
-
+    //Paramétrages des vues
     public function __construct()
     {
         $this->request = new Request();

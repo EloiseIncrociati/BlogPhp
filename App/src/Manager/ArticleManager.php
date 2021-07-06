@@ -9,6 +9,7 @@ class ArticleManager extends DatabaseManager
 {
     private function buildObject($row)
     {
+        //construction de l'objet Article
         $article = new Article();
         $article->setId($row['id']);
         $article->setTitle($row['title']);
