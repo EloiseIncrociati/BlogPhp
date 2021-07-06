@@ -24,7 +24,7 @@ class Router
     public function run()
     {
         $route = $this->request->getGet()->get('route');
-        
+        //Le router permet d'appeler un controller qui renvoit une vue.
         try{
             if(isset($route))
             {

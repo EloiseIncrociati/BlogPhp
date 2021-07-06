@@ -23,6 +23,7 @@ abstract class Controller
 
     public function __construct()
     {
+        //Déclaration des objets par le Manager
         $this->articleManager = new ArticleManager();
         $this->commentManager = new CommentManager();
         $this->userManager = new UserManager();

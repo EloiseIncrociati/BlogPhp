@@ -7,7 +7,7 @@ class CommentValidation extends Validation
 {
     private $errors = [];
     private $constraint;
-
+    //Controller qui vérifie que les commentaires respectent les conditions données.
     public function __construct()
     {
         $this->constraint = new Constraint();

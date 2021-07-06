@@ -4,6 +4,7 @@ namespace App\src\model;
 
 class Comment
 {
+    //Identité des commentaires
     /**
      * @var int
      */
