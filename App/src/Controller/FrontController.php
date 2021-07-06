@@ -3,6 +3,7 @@
 namespace App\src\Controller;
 
 use App\config\Parameter;
+use App\src\model\Comment;
 
 class FrontController extends Controller
 {
